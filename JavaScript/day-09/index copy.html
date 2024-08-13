@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        form {
+            width: 100%;
+            max-width: 200px;
+        }
+
+        form .form-input {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 8px;
+        }
+
+        form select {
+            width: 100%;
+        }
+    </style>
+
+
+    <form action="submit.php" method="get" onsubmit="return false" id="myform">
+        <div class="form-input">
+            <label for="fullname">fullname</label>
+            <input type="text" name="full" placeholder="" id="fullname">
+        </div>
+        <!-- <div class="form-input">
+            <label for="email">email</label>
+            <input type="email" name="email" placeholder="" id="email">
+        </div>
+        <div class="form-input">
+            <label for="age">age</label>
+            <input type="number" name="age" placeholder="" id="age">
+        </div>
+        <div class="form-input">
+            <label for="address">address</label>
+            <input type="text" name="address" placeholder="" id="address">
+        </div> -->
+        <div class="form-input">
+            <label for="phone">phone</label>
+            <input type="number" name="phone" placeholder="" id="phone">
+        </div>
+        <div class="form-input">
+            <span>Gender</span>
+            <div class="form-input-group">
+                <label for="male">male</label>
+                <input type="radio" name="gender" value="male" id="male">
+                <label for="female">female</label>
+                <input type="radio" name="gender" value="female" id="female">
+                <label for="other">other</label>
+                <input type="radio" name="gender" value="other" id="other">
+            </div>
+        </div>
+        <div class="form-input">
+            <span>Course</span>
+            <div class="form-input-group">
+                <select name="course" id="">
+                    <option value="BCA">BCA</option>
+                    <option value="BIT">BIT</option>
+                    <option value="BBS">BBS</option>
+                    <option value="BBA">BBA</option>
+                </select>
+            </div>
+        </div>
+        <!-- <div class="form-input">
+
+            <label for="image">Image</label>
+            <input type="file" id="image" name="image" accept="image/*" >
+        </div> -->
+        <div class="form-input">
+
+            <label for="query">Any Query ?</label>
+            <textarea name="query" id="query" cols="30" rows="5"></textarea>
+        </div>
+
+        <div class="form-button-list">
+            <button type="submit" onclick="sub()">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+
+    </form>
+
+
+
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

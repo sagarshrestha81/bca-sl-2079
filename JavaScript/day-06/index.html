@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+            margin: 0;
+        }
+        
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            margin: 16px;
+            
+            .card-img {
+                width: 100%;
+                height: auto;
+            }
+        
+            .card-content {
+                padding: 16px;
+        
+                .card-title {
+                    font-size: 1.5em;
+                    margin: 0;
+                    margin-bottom: 8px;
+                }
+        
+                .card-description {
+                    font-size: 1em;
+                    margin: 0;
+                    margin-bottom: 16px;
+                    color: #6c757d;
+                }
+        
+                .card-button {
+                    display: inline-block;
+                    padding: 10px 16px;
+                    background-color: #007bff;
+                    color: #fff;
+                    text-decoration: none;
+                    border-radius: 4px;
+                    transition: background-color 0.3s ease;
+        
+                    &:hover {
+                        background-color: #0056b3;
+                    }
+                }
+            }
+        }
+        
+    </style>
+
+    <!-- <button onclick="login();">Login</button> -->
+    <div id="card">
+        <img src="https://via.placeholder.com/150" alt="Card image" class="card-img">
+        <div class="card-content">
+            <h2 class="card-title">Card Title</h2>
+            <p class="card-description">This is a brief description of the card content. It provides some details about the card.</p>
+            <a href="#" id="card-button">Read More</a>
+             <button onclick="change()">change</button>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
