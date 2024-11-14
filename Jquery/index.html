@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>jQuery</h1>
+    <p class="para">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, itaque.
+    </p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+    <input type="text" id="name" value="">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="./jquery.js"></script>
+    <script>
+      $("#hide").click(function () {
+        $(".para").hide();
+      });
+      $("#show").click(function () {
+        $(".para").show();
+      });
+      $("#toggle").click(function () {
+        $(".para").toggle();
+      });
+      $("#name").keyup(function(){
+        name= $("#name").val();
+        console.log(name);
+      })
+    </script>
+  </body>
+</html>
