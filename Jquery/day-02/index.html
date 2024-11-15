@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .rectangle{
+        width: 50px;
+        height: 50px;
+        background: #ff0000;
+        transition: all ease-in-out .3s;
+      }
+      .circle{
+        border-radius: 50%;
+      }
+    </style>
+    <div class="rectangle"></div>
+    <button id="btn-circle">Circle</button>
+    <button id="btn-rect">Rectangle</button>
+    <button id="btn-toggle">Toggle</button>
+    <br>
+    <input type="number" id="border-radius">
+    <br>
+    <button class="btn-bg" data-color="#ff0000">Red</button>
+    <button class="btn-bg" data-color="#00ff00">Green</button>
+    <button class="btn-bg" data-color="#0000ff">Blue</button>
+
+
+   
+    <script src="./jquery.js"></script>
+    
+    <script>
+
+      $(document).on("keyup","#border-radius",function(){
+        borderRadius= $(this).val()+"px";
+        console.log(borderRadius);
+        $(".rectangle").css("border-radius",borderRadius);
+      })
+      $(document).on("click",".btn-bg",function(){
+        bgColor= $(this).attr("data-color");
+        console.log(bgColor)
+        $(".rectangle").css("background",bgColor);
+      })
+
+      $(document).on("click", "#btn-circle", function () {
+      
+      $(".rectangle").addClass("circle");
+      });
+      $(document).on("click", "#btn-rect", function () {
+      
+      $(".rectangle").removeClass("circle");
+      });
+      $(document).on("click", "#btn-toggle", function () {
+      
+      $(".rectangle").toggleClass("circle");
+      });
+    </script>
+  </body>
+</html>
