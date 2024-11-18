@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+   
+   
+
+   
+    <script src="./jquery.js"></script>
+    
+    <script>
+
+      $(document).on("keyup","#border-radius",function(){
+        borderRadius= $(this).val()+"px";
+        console.log(borderRadius);
+        $(".rectangle").css("border-radius",borderRadius);
+      })
+      $(document).on("click",".btn-bg",function(){
+        bgColor= $(this).attr("data-color");
+        console.log(bgColor)
+        $(".rectangle").css("background",bgColor);
+      })
+
+      $(document).on("click", "#btn-circle", function () {
+      
+      $(".rectangle").addClass("circle");
+      });
+      $(document).on("click", "#btn-rect", function () {
+      
+      $(".rectangle").removeClass("circle");
+      });
+      $(document).on("click", "#btn-toggle", function () {
+      
+      $(".rectangle").toggleClass("circle");
+      });
+    </script>
+  </body>
+</html>

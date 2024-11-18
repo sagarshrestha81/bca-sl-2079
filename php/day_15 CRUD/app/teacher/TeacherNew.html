@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>New Teacher</h1>
+    <form action="" method="POST" id="myForm">
+        <div>
+            <label for="teacher_name">teacher Name:</label>
+            <input type="text" name="teacher_name">
+        </div>
+        <div>
+            <label for="teacher_class">teacher class:</label>
+            <input type="text" name="teacher_class">
+        </div>
+        <div>
+            <label for="teacher_roll">teacher roll:</label>
+            <input type="text" name="teacher_roll">
+        </div>
+        <div>
+            <button type="submit" name="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+
+    </form>
+    <a href="./teacher.php">Goto teachers</a>
+
+
+    <!-- Script -->
+    <script src="./../../assets/js/lib/jquery.js"></script>
+    <script src="./../../assets/js/main.js"></script>
+    <script>
+        $(document).on("submit","#myForm",function(e){
+            e.preventDefault();
+            dataTeacher= $(this).serialize();
+            console.log(dataTeacher);
+            $.ajax({
+                url:"./TeacherNew.php",
+                type:'POST',
+                data:dataTeacher,
+                success:function(response){
+                    console.log(response);
+                }
+            });
+        
+        
+        })
+    </script>
+</body>
+</html>
