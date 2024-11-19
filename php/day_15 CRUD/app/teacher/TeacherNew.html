@@ -26,12 +26,17 @@
         </div>
 
     </form>
-    <a href="./teacher.php">Goto teachers</a>
+    <a href="./Teacher.php">Goto teachers</a>
+<br>
+<button class="btn" data-val="a">A</button>
+<button class="btn" data-val="b">B</button>
+<button class="btn" data-val="c">C</button>
+<button class="btn" data-val="d">D</button>
+
 
 
     <!-- Script -->
     <script src="./../../assets/js/lib/jquery.js"></script>
-    <script src="./../../assets/js/main.js"></script>
     <script>
         $(document).on("submit","#myForm",function(e){
             e.preventDefault();
@@ -42,12 +47,27 @@
                 type:'POST',
                 data:dataTeacher,
                 success:function(response){
-                    console.log(response);
+                    $("#myForm")[0].reset();
+                    alert(response)
                 }
             });
         
         
         })
+    
+    $(document).on("click",".btn",function(){
+       
+        $.ajax({
+            url:"./test.php",
+            type:"GET",
+            data :{
+                dataVal:$(this).attr("data-val")
+            },
+            success:function(response){
+                console.log(response)
+            }
+        })
+    })
     </script>
 </body>
 </html>
